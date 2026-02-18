@@ -1,0 +1,35 @@
+{
+  "name": "simple-templator",
+  "version": "1.0.0",
+  "description": "A simple typescript text template engine ",
+  "keywords": [ "text", "template", "engine", "templator", "simple" ],
+  "author": "TheDarkDnKTv",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "lib/index.ts",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheDarkDnKTv/simple-templator.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest"
+  },
+  "exports": {
+    ".": {
+      "import": "./lib/index.ts"
+    }
+  },
+  "dependencies": {
+    "comparator-framework": "^1.1.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "packageManager": "pnpm@10.29.2"
+}
