@@ -63,4 +63,9 @@ describe('template/Template', () => {
     assert.isTrue(template.hasVariable('var1'));
     assert.isFalse(template.hasVariable('var3'));
   });
+
+  it('should handle empty variable name', () => {
+    const template = Template.parse('{{ }}');
+    expect(() => template.process({ '': 'test' })).not.to.throw().eq('test');
+  });
 });

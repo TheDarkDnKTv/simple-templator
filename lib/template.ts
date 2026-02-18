@@ -66,7 +66,7 @@ export class Template {
     for (const token of this.semantics.result) {
       if (token.type === SemanticTokenType.VARIABLE) {
         const name = this.processExpressionName(token.value); 
-        if (!pValues[name]) { // TODO: what happens when name === ""
+        if (pValues[name] === undefined) {
           if (this.options.ignoreUndefinedVariables) {
             continue;
           }
